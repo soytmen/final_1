@@ -40,7 +40,6 @@ public class GameOverUI : MonoBehaviour
 
     private void UpdateScoreAndHighScore(bool hasNewHighScore)
     {
-        scoreText.text = Score.GetScore().ToString();
         highScoreText.text = Score.GetHighScore().ToString();
         messsageText.text = hasNewHighScore ? "CONGRATULATIONS" : "DON'T WORRY, NEXT TIME";
 

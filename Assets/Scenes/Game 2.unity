@@ -370,6 +370,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restartButton: {fileID: 2154382275036110559}
+  messsageText: {fileID: 0}
+  scoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
 --- !u!1 &433374315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1860,7 @@ MonoBehaviour:
   snakeHeadSprite: {fileID: 21300000, guid: cb0dda71d17e14a5397dd937d9b48cf9, type: 3}
   snakeBodySprite: {fileID: 21300000, guid: 3f7bca037e73b403abcaf55f02ca25f9, type: 3}
   foodSprite: {fileID: 21300000, guid: fab1cffb3db1d41cc82e8300b33e7777, type: 3}
+  bonusSprite: {fileID: -2413806693520163455, guid: 02488107606a12b4eb6451300866af3b, type: 3}
   soundAudioClipsArray:
   - sound: 0
     audioClip: {fileID: 8300000, guid: 287714c74120797488f2baa3f148324a, type: 3}

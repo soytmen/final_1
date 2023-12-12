@@ -13,7 +13,8 @@ public static class Loader
     {
         Game,
         LoadingScene,
-        MainMenu
+        MainMenu,
+        
     }
 
     private static Scene sceneAux;
@@ -40,12 +41,5 @@ public static class Loader
         }
     }
 
-    
-    // () => { cuerpo función }
-    /*
-     * private void NombreAux(){
-     * cuerpo función
-     * }
-     */
-    
+  
 }

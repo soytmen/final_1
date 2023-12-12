@@ -22,10 +22,10 @@ private enum State
     {
         private SnakeMovePosition snakeMovePosition; // Posición 2D de la SnakeBodyPart
         private Transform transform;
-
+        private GameObject snakeBodyPartGameObject;
         public SnakeBodyPart(int bodyIndex)
         {
-            GameObject snakeBodyPartGameObject = new GameObject("Snake Body",
+             snakeBodyPartGameObject = new GameObject("Snake Body",
                 typeof(SpriteRenderer));
             SpriteRenderer snakeBodyPartSpriteRenderer = snakeBodyPartGameObject.GetComponent<SpriteRenderer>();
             snakeBodyPartSpriteRenderer.sprite = 
@@ -107,8 +107,15 @@ private enum State
 
             transform.eulerAngles = new Vector3(0, 0, angle);
         }
+
+        public GameObject GetGameObject()
+        {
+            return snakeBodyPartGameObject;
+        }
     }
-    
+
+
+  
     private class SnakeMovePosition
     {
         private SnakeMovePosition previousSnakeMovePosition;
@@ -239,13 +246,21 @@ private enum State
             
             // ¿He comido comida?
             bool snakeAteFood = levelGrid.TrySnakeEatFood(gridPosition);
+            bool snakeAteBonus = levelGrid.TrySnakeEatBonus(gridPosition);
             if (snakeAteFood)
             {
                 // El cuerpo crece
                 snakeBodySize++;
                 CreateBodyPart();
             }
-            
+            float probabilidad = Random.value;
+
+            if (snakeAteBonus && probabilidad <= 0.50f)
+            {
+
+                Invisible();
+
+            }
             if (snakeMovePositionsList.Count > snakeBodySize)
             {
                 snakeMovePositionsList.
@@ -254,14 +269,7 @@ private enum State
 
             bool snakeAteFood2 = levelGrid.TrySnakeEatFood(gridPosition);
 
-            float probabilidad = Random.value;
-
-            if (snakeAteFood && probabilidad <= 0.25f)
-            {
-                
-                Invisible();
-                              
-            }
+          
 
             if (snakeMovePositionsList.Count > snakeBodySize)
             {
@@ -288,14 +296,24 @@ private enum State
 
     void Invisible()
     {
-        
+            
+        for (int i = 0; i < snakeBodyPartsList.Count; i++)
+        {
+            snakeBodyPartsList[i].GetGameObject().GetComponent<Renderer>().enabled = false;
+        }
+
         GetComponent<Renderer>().enabled = false;
+
 
         Invoke("Visible", 5f); 
     }
 
     void Visible()
     {
+        for (int i = 0; i < snakeBodyPartsList.Count; i++)
+        {
+            snakeBodyPartsList[i].GetGameObject().GetComponent<Renderer>().enabled = true;
+        }
         GetComponent<Renderer>().enabled = true;
 
     }
@@ -382,4 +400,7 @@ private enum State
             snakeBodyPartsList[i].SetMovePosition(snakeMovePositionsList[i]);
         }
     }
+
+   
 }
+
