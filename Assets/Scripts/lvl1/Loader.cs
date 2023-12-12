@@ -14,7 +14,7 @@ public static class Loader
         Game,
         LoadingScene,
         MainMenu,
-        
+        ChooseLvl
     }
 
     private static Scene sceneAux;

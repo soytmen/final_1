@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Game 2.unity
     guid: 6788227271e198847a9317b5eef8669e
   - enabled: 1
-    path: Assets/Scenes/Choose lvl.unity
+    path: Assets/Scenes/ChooseLvl.unity
     guid: 3b638e5a125a3a1409a183d0e92134c9
   - enabled: 1
     path: Assets/Scenes/LoadingScene.unity

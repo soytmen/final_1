@@ -702,6 +702,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &728775170 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7027826649039449096, guid: 2ac0f789bbc7e4132b0b743d44ef226a, type: 3}
+  m_PrefabInstance: {fileID: 406776875}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &994852539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -808,6 +819,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8185832590207404422, guid: 2ac0f789bbc7e4132b0b743d44ef226a, type: 3}
   m_PrefabInstance: {fileID: 994852539}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &994852541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7027826649039449096, guid: 2ac0f789bbc7e4132b0b743d44ef226a, type: 3}
+  m_PrefabInstance: {fileID: 994852539}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1012840925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,9 +1543,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d17e79cfb4d4baa9ba06d82b07ac0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playButton: {fileID: 0}
+  playButton: {fileID: 728775170}
   howToPlayButton: {fileID: 1857715929}
-  quitButton: {fileID: 0}
+  quitButton: {fileID: 994852541}
   quitHowToPlayPanelButton: {fileID: 1200015500}
   howToPlayPanel: {fileID: 1032219480}
 --- !u!1 &1818574713
